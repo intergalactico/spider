@@ -17,8 +17,12 @@
   "bugs": {
     "url": "https://github.com/react-component/spider/issues"
   },
+  "files": [
+    "lib",
+    "assets/*.css"
+  ],
   "licenses": "MIT",
-  "main": "./index",
+  "main": "./lib/index",
   "config": {
     "port": 8000
   },
