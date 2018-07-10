@@ -12,9 +12,10 @@ const Surface = ReactART.Surface;
 import layout from './layout';
 
 function defaultNodeCreator(data) {
-  return (<Node margin="10" width="20" height="20" data={data}>
-    <Circle />
-  </Node>);
+  return (
+    <Node margin="10" width="20" height="20" data={data}>
+      <Circle />
+    </Node>);
 }
 
 function defaultLinkCreator(link) {

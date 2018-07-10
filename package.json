@@ -17,17 +17,13 @@
   "bugs": {
     "url": "https://github.com/react-component/spider/issues"
   },
-  "files": [
-    "lib",
-    "assets/*.css"
-  ],
   "licenses": "MIT",
-  "main": "./lib/index",
+  "main": "./dist/main",
   "config": {
     "port": 8000
   },
   "scripts": {
-    "build": "rc-tools run build",
+    "build": "webpack --mode production",
     "gh-pages": "rc-tools run gh-pages",
     "start": "rc-tools run server",
     "pub": "rc-tools run pub",
@@ -39,6 +35,10 @@
     "coverage": "rc-tools run coverage"
   },
   "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
     "eslint": "^2.3.0",
     "eslint-config-airbnb": "^6.1.0",
     "eslint-plugin-react": "^4.2.1",
@@ -47,10 +47,11 @@
     "rc-tools": "5.x",
     "react": "0.14.x",
     "react-addons-test-utils": "0.14.x",
-    "react-dom": "0.14.x"
+    "react-dom": "0.14.x",
+    "webpack": "^4.15.1",
+    "webpack-cli": "^3.0.8"
   },
   "pre-commit": [
-    "lint"
   ],
   "dependencies": {
     "color": "^0.11.1",
