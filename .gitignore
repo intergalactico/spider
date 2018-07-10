@@ -20,6 +20,6 @@ Thumbs.db
 node_modules
 .cache
 *.css
-build
+dist
 lib
 coverage
