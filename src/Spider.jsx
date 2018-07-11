@@ -1,6 +1,6 @@
 import React, { PropTypes } from 'react';
 import ReactDOM from 'react-dom';
-import SpiderBase from './base/SpiderBase.jsx';
+import SpiderBase from './base/SpiderBase';
 import Shape, { Link, Node, Circle } from './shapes';
 import Color from './color';
 import ReactART from 'react-art';
