@@ -28,6 +28,7 @@
   },
   "scripts": {
     "build": "rc-tools run build",
+    "compile": "rc-tools run compile",
     "gh-pages": "rc-tools run gh-pages",
     "start": "rc-tools run server",
     "pub": "rc-tools run pub",
@@ -36,7 +37,8 @@
     "saucelabs": "rc-tools run saucelabs",
     "test": "rc-tools run test",
     "chrome-test": "rc-tools run chrome-test",
-    "coverage": "rc-tools run coverage"
+    "coverage": "rc-tools run coverage",
+    "postinstall": "npm run compile"
   },
   "devDependencies": {
     "eslint": "^2.3.0",
