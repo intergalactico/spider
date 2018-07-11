@@ -33,7 +33,7 @@
     "test": "rc-tools run test",
     "chrome-test": "rc-tools run chrome-test",
     "coverage": "rc-tools run coverage",
-    "post_install": "npm run build"
+    "postinstall": "npm run build"
   },
   "devDependencies": {
     "babel-core": "^6.26.3",
