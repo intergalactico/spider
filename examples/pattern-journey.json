@@ -1,0 +1,175 @@
+{
+  "nodes": [
+    {
+      "id": 10,
+      "text": "Is the component in PL?",
+      "color": "#ff7f3f",
+      "x": "0",
+      "y": "50"
+    },
+    {
+      "id": 20,
+      "text": "Does it fulfill all requirements?",
+      "color": "#ff7f3f",
+      "width": 150,
+      "x": "-300",
+      "y": "100"
+    },
+    {
+      "id": 30,
+      "text": "Anything similar at other projects?",
+      "color": "#ff7f3f",
+      "width": 175,
+      "x": "300",
+      "y": "100"
+    },
+    {
+      "id": 40,
+      "text": "Use it!",
+      "color": "#ff7f3f",
+      "x": "0",
+      "y": "450"
+    },
+    {
+      "id": 50,
+      "text": "Can it be amended to suit\n your new requirements while still\n fitting existing requirements?",
+      "color": "#ff7f3f",
+      "width": 175,
+      "height": 52,
+      "x": "-150",
+      "y": "150"
+    },
+    {
+      "id": 60,
+      "text": "Implement the component\n JIRA + pull request",
+      "color": "#ff7f3f",
+      "height": 42,
+      "x": "0",
+      "y": "350"
+    },
+    {
+      "id": 80,
+      "text": "Can you take it as it is?",
+      "color": "#ff7f3f",
+      "x": "200",
+      "y": "150"
+    },
+    {
+      "id": 90,
+      "text": "Do other teams ready to use\n new altered version?",
+      "color": "#ff7f3f",
+      "width": 150,
+      "height": 40,
+      "x": "50",
+      "y": "250"
+    },
+    {
+      "id": 100,
+      "text": "Can it be used by other projects\n in the future",
+      "color": "#ff7f3f",
+      "width": 150,
+      "height": 40,
+      "x": "300",
+      "y": "250"
+    }
+  ],
+  "links": [
+    {
+      "from": 10,
+      "to": 20,
+      "text": "yes",
+      "offset": "0 -6 0 -25",
+      "textOffset": "0 -15",
+      "color": "#a7d888",
+      "clockwise": "0"
+    },
+    {
+      "from": 10,
+      "to": 30,
+      "text": "no",
+      "offset": "0 -6 0 -25",
+      "textOffset": "0 -15",
+      "color": "#a7d888",
+      "clockwise": "1"
+    },
+    {
+      "from": 20,
+      "to": 40,
+      "text": "yes",
+      "offset": "0 0 -6 -5",
+      "textOffset": "-15 -295",
+      "color": "#a7d888"
+    },
+    {
+      "from": 20,
+      "to": 50,
+      "text": "no",
+      "offset": "0 -6 0 -25",
+      "textOffset": "15 -15",
+      "color": "#a7d888",
+      "clockwise": "1"
+    },
+    {
+      "from": 50,
+      "to": 60,
+      "text": "yes",
+      "offset": "0 0 -65 0",
+      "textOffset": "-15 -25",
+      "color": "#a7d888"
+    },
+    {
+      "from": 60,
+      "to": 40,
+      "text": "Wait for release",
+      "offset": "0 0 0 -25",
+      "color": "#a7d888"
+    },
+    {
+      "from": 30,
+      "to": 80,
+      "text": "yes",
+      "offset": "0 0 65 0",
+      "textOffset": "15 -10",
+      "color": "#a7d888"
+    },
+    {
+      "from": 80,
+      "to": 60,
+      "text": "yes",
+      "offset": "0 0 65 -6",
+      "textOffset": "15 -140",
+      "color": "#a7d888"
+    },
+    {
+      "from": 80,
+      "to": 90,
+      "text": "no",
+      "offset": "0 -6 15 -25",
+      "color": "#a7d888",
+      "clockwise": "0"
+    },
+    {
+      "from": 50,
+      "to": 90,
+      "text": "no",
+      "offset": "0 -6 -15 -25",
+      "color": "#a7d888",
+      "clockwise": "1"
+    },
+    {
+      "from": 90,
+      "to": 60,
+      "text": "yes",
+      "offset": "0 -6 15 -25",
+      "color": "#a7d888",
+      "clockwise": "0"
+    },
+    {
+      "from": 30,
+      "to": 100,
+      "text": "no",
+      "offset": "15 -6 15 -25",
+      "color": "#a7d888"
+    }
+  ]
+}
