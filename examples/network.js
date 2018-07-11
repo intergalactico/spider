@@ -1,5 +1,5 @@
 import 'normalize.css';
-import Spider from 'rc-spider';
+import Spider from '../lib/index.js';
 import React from 'react';
 import ReactDOM from 'react-dom';
 
