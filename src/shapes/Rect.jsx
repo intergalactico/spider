@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactART from 'react-art';
-import Rectangle from 'react-art/lib/Rectangle.art';
+import Rectangle from 'react-art/Rectangle';
 const Group = ReactART.Group;
 const Transform = ReactART.Transform;
 import Shape from './Shape';

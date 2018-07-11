@@ -1,5 +1,6 @@
 import React from 'react';
 import dataLoader from '../dataLoader';
+import PropTypes from 'prop-types';
 
 class SpiderBase extends React.Component {
   getTreeRoot() {
@@ -61,9 +62,9 @@ class SpiderBase extends React.Component {
 }
 
 SpiderBase.propTypes = {
-  nodeCreator: React.PropTypes.func,
-  width: React.PropTypes.any,
-  height: React.PropTypes.any,
+  nodeCreator: PropTypes.func,
+  width: PropTypes.any,
+  height: PropTypes.any,
 };
 
 export default SpiderBase;

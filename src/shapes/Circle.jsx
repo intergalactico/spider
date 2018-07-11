@@ -1,6 +1,6 @@
 import React from 'react';
 import Shape from './Shape';
-import ArtCircle from 'react-art/lib/Circle.art';
+import ArtCircle from 'react-art/Circle';
 
 class Circle extends Shape {
   render() {
