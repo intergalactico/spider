@@ -1,8 +1,8 @@
-import Link from './Link.jsx';
-import Node from './Node.jsx';
-import Circle from './Circle.jsx';
-import Text from './Text.jsx';
-import Rect from './Rect.jsx';
+import Link from './Link';
+import Node from './Node';
+import Circle from './Circle';
+import Text from './Text';
+import Rect from './Rect';
 
 export default {
   Link,

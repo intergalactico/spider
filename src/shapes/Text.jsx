@@ -1,5 +1,5 @@
 import React from 'react';
-import Shape from './Shape.jsx';
+import Shape from './Shape';
 import ReactART from 'react-art';
 const Transform = ReactART.Transform;
 const ArtText = ReactART.Text;

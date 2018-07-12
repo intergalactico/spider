@@ -1,7 +1,9 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+
 import ReactART from 'react-art';
 const Group = ReactART.Group;
-import Text from './Text.jsx';
+import Text from './Text';
 const Shape = ReactART.Shape;
 const Transform = ReactART.Transform;
 import { diagonal, broke } from '../base/Util';

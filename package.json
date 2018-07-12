@@ -28,6 +28,7 @@
   },
   "scripts": {
     "build": "rc-tools run build",
+    "compile": "rc-tools run compile",
     "gh-pages": "rc-tools run gh-pages",
     "start": "rc-tools run server",
     "pub": "rc-tools run pub",
@@ -45,18 +46,16 @@
     "expect.js": "0.3.x",
     "pre-commit": "1.x",
     "rc-tools": "5.x",
-    "react": "0.14.x",
-    "react-addons-test-utils": "0.14.x",
-    "react-dom": "0.14.x"
+    "react": "16.4.1",
+    "react-addons-test-utils": "16.4.1",
+    "react-dom": "16.4.1"
   },
-  "pre-commit": [
-    "lint"
-  ],
   "dependencies": {
     "color": "^0.11.1",
     "immutable": "^3.7.6",
     "lodash": "^4.6.1",
-    "react-art": "^0.14.0",
+    "prop-types": "^15.6.2",
+    "react-art": "^16.4.1",
     "uuid": "^2.0.1"
   }
 }
