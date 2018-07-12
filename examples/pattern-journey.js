@@ -11,7 +11,7 @@ const { darken } = Spider.Color;
 const nodeCreator = function (data) {
   const nodeWidth = Number(data.width) || 120;
   const nodeHeight = Number(data.height) || 32;
-  return (<Node width={nodeWidth} height={nodeHeight} offset={[- nodeWidth / 2, -24]}>
+  return (<Node width={nodeWidth} height={nodeHeight} offset={[- nodeWidth / 2, -24]} onClick={() => alert(data.info)}>
     <Rect color={data.color} radius={16} strokeWidth={2} stroke={darken(data.color, 0.2)}/>
     <Text offset={[nodeWidth / 2, 12]} color={data.textColor || 'white'} alignment="middle">{data.text}</Text>
   </Node>);
@@ -20,7 +20,15 @@ const nodeCreator = function (data) {
 const linkCreator = function(link) {
   const offset = link.offset ? link.offset.split(' ') : [0, 0, 0, 0];
   const textOffset = link.textOffset ? link.textOffset.split(' ') : [0, 0];
-  return <Link data={link} stroke={link.color || 'red'} offset={offset} textOffset={textOffset} text={link.text} type="broke" strokeRadius={5} arrow={true} />;
+  return <Link
+    data={link}
+    stroke={link.color || 'red'}
+    offset={offset}
+    textOffset={textOffset}
+    rotate={link.rotate}
+    text={link.text}
+    type="broke"
+    strokeRadius={5} arrow={true} />;
 }
 
 window.GLOBAL_LINK_STROKE = '#ccc';
@@ -31,7 +39,7 @@ fetch(data).then(response => response.json())
     // translate coordinates
     response.nodes = response.nodes.map(item => {
       item.x = parseInt(item.x) + 500;
-      item.text = `${item.id} \n ${item.text}`;
+      //item.text = `${item.id} \n ${item.text}`;
       return item;
     })
     // const tree = response;

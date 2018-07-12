@@ -12,7 +12,7 @@ class Link extends Component {
   render() {
     const { projection } = this.props;
 
-    const { data, text, stroke, strokeWidth, offset, textOffset, arrow } = this.props;
+    const { data, text, stroke, strokeWidth, offset, textOffset, rotate, arrow } = this.props;
     const { source, target } = data;
     // default theme style
     const pathId = `link-path-${source.id}-${target.id}`;
@@ -36,7 +36,7 @@ class Link extends Component {
     return (<Group key={pathId} >
       <Shape d={path.path} stroke={stroke} strokeWidth={strokeWidth} />
       {arrow ? <Shape d="M-4.5,10L0.5,0L5.5,10" fill={stroke} transform={transform} /> : null}
-      <Text color={stroke} offset={[midPoint.x, midPoint.y]} alignment="middle">
+      <Text color={stroke} offset={[midPoint.x, midPoint.y]} rotate={rotate} alignment="middle">
         {text}
       </Text>
     </Group>);
