@@ -12,7 +12,7 @@ class Link extends Component {
   render() {
     const { projection } = this.props;
 
-    const { data, text, stroke, strokeWidth, offset, arrow } = this.props;
+    const { data, text, stroke, strokeWidth, offset, textOffset, rotate, arrow } = this.props;
     const { source, target } = data;
     // default theme style
     const pathId = `link-path-${source.id}-${target.id}`;
@@ -22,6 +22,8 @@ class Link extends Component {
     const svgPath = document.createElementNS('http://www.w3.org/2000/svg', 'path');
     svgPath.setAttribute('d', path.path);
     const midPoint = svgPath.getPointAtLength(Math.ceil(svgPath.getTotalLength() / 2));
+    midPoint.x += parseInt(textOffset[0], 10);
+    midPoint.y += parseInt(textOffset[1], 10);
     svgPath.remove();
     const points = path.points;
     const movePoint = points[points.length - 1];
@@ -34,7 +36,7 @@ class Link extends Component {
     return (<Group key={pathId} >
       <Shape d={path.path} stroke={stroke} strokeWidth={strokeWidth} />
       {arrow ? <Shape d="M-4.5,10L0.5,0L5.5,10" fill={stroke} transform={transform} /> : null}
-      <Text color={stroke} offset={[midPoint.x, midPoint.y]} alignment="middle">
+      <Text color={stroke} offset={[midPoint.x, midPoint.y]} rotate={rotate} alignment="middle">
         {text}
       </Text>
     </Group>);
@@ -45,6 +47,7 @@ Link.propTypes = {
   projection: PropTypes.func,
   data: PropTypes.object,
   offset: PropTypes.array,
+  textOffset: PropTypes.array,
   text: PropTypes.string,
   stroke: PropTypes.string,
   arrow: PropTypes.boolean,
