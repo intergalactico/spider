@@ -6,14 +6,14 @@ const ArtText = ReactART.Text;
 
 class Text extends Shape {
   render() {
-    const { offset, children, color, transform, rotate, alignment } = this.props;
+    const { offset, children, color, transform, rotate, alignment, size } = this.props;
 
     const textTransform = transform || new Transform();
     textTransform.translate(offset[0], offset[1]);
     rotate && textTransform.rotate(rotate);
     return (<ArtText transform={textTransform} fill={color}
       alignment={alignment || 'left'}
-      font={{ fontSize: 10, fontWeight: 100 }}
+      font={{ fontSize: size, fontWeight: 100 }}
     >
       {children}
     </ArtText>);

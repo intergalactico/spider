@@ -9,11 +9,11 @@ const { Node, Circle, Text, Link, Rect} = Spider.Shape;
 const { darken } = Spider.Color;
 
 const nodeCreator = function (data) {
-  const nodeWidth = Number(data.width) || 120;
-  const nodeHeight = Number(data.height) || 32;
+  const nodeWidth = Number(data.width) || 150;
+  const nodeHeight = Number(data.height) || 50;
   return (<Node width={nodeWidth} height={nodeHeight} offset={[- nodeWidth / 2, -24]} onClick={() => alert(data.info)}>
     <Rect color={data.color} radius={16} strokeWidth={2} stroke={darken(data.color, 0.2)}/>
-    <Text offset={[nodeWidth / 2, 12]} color={data.textColor || 'white'} alignment="middle">{data.text}</Text>
+    <Text offset={[nodeWidth / 2, 12]} color={data.textColor || 'white'} alignment="middle" size="14">{data.text}</Text>
   </Node>);
 }
 
@@ -38,8 +38,8 @@ fetch(data).then(response => response.json())
   .then(response => {
     // translate coordinates
     response.nodes = response.nodes.map(item => {
-      item.x = parseInt(item.x) + 500;
-      //item.text = `${item.id} \n ${item.text}`;
+      item.x = parseInt(item.x) + 450;
+      // item.text = `${item.id} ${item.text}`;
       return item;
     })
     // const tree = response;
